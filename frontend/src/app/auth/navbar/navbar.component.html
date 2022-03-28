@@ -1,0 +1,24 @@
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <a class="navbar-brand" href="\">
+    <img src="https://i.ibb.co/xmJCRFq/Whats-App-Image-2020-10-29-at-00-27-31-preview-rev-1.png" alt="" style="width: 110px;">
+  </a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarColor01">
+    <ul class="navbar-nav ml-auto" *ngIf="login; else logout">
+      <li class="nav-item" *ngIf="login">
+          <a class="nav-link" (click) = "onLogOut()" href="#" >Salir </a>
+      </li>
+    </ul>
+    <ng-template #logout>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" *ngIf="!user">
+          <a class="nav-link" routerLink="/auth/login" style="font-size: larger;">Iniciar sesion</a>
+          <a class="nav-link" routerLink="/auth/register" style="font-size: larger;">Registrarse</a>
+        </li>
+      </ul>
+    </ng-template>
+  </div>
+</nav>

@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="login">
+    <div class="login-triangle"></div>
+
+    <h2 class="login-header">Sumador</h2>
+
+    <form #frmSuma="ngForm" class="login-container" (ngSubmit)="suma(frmSuma)">
+      <p>
+        <input type="number" name="numero1" placeholder="Primer número" ngModel required>
+      </p>
+      <p>
+        <input type="number" name="numero2" placeholder="Segundo número" ngModel required>
+      </p>
+      <p>
+        <input type="submit" value="Sumar">
+      </p>
+      <p name="result">Resultado: {{ result }}</p>
+    </form>
+  </div>
+</div>
